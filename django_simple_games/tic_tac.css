@@ -1,0 +1,42 @@
+.navbar {
+    background: #225;
+}
+
+.jumbotron {
+    margin-bottom: -82px;
+    
+}
+
+#resetBtn {
+    background-color: rgb(137, 185, 218);
+    border: 3px solid rgb(20, 58, 56);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+#resetBtn:hover {
+    background-color: rgb(77, 112, 136);
+    border-color: rgb(58, 255, 108);
+}
+#resetBtn:active {
+    background-color: rgb(88, 241, 121);
+}
+
+td {
+    background: rgb(73, 15, 95);
+    border: 10px solid rgb(122, 199, 195);
+    text-align: center;
+    font-size: 55px;
+    height: 100px;
+    width: 100px;
+    background-size : "contain";
+    background-position : "50% 50%";
+}
+
+#winMsg {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+}

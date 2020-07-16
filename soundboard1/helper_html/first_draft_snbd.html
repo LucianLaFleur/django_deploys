@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <title>Custom Soundboard Project1</title>
+</head>
+<body>
+    
+<!-- 
+<button onclick="play()" type="button">Play </button>
+<button onclick="pause()" type="button">Pause</button> -->
+
+<audio id="aud1" src="./ExerciseAuds/golden_heyhey.wav" preload="auto"></audio>
+<audio id="aud2" src="./ExerciseAuds/hourlyNya.wav" preload="auto"></audio>
+<audio id="aud3" src="./ExerciseAuds/sandstorm_short.wav" preload="auto"></audio>
+<audio id="aud4" src="./ExerciseAuds/endcaps/drake_wooh_alright.wav" preload="auto"></audio>
+<!-- <audio id="aud5" src="..." preload="auto"></audio> -->
+
+<h1> Collection of different audio playing options</h1>
+<!-- NOTE: play multi allows for multiple channels, but can't easily be paused -->
+<!-- Play single should be used for longer bits that you want to pause -->
+
+<a href="javascript:play_multi('aud1');">hey_hey from link</a>
+<button onclick='play_multi("aud1")' type="button">hey_hey from button</button>
+
+<br />
+<a href="javascript:play_multi('aud2');">...b</a><br />
+<hr>
+<button onclick="play_single('aud4')" type="button">Play 4 </button>
+<button onclick="pause_single('aud4')" type="button">Pause (and preserve)</button>
+<button onclick="reset_play('aud4')" type="button">Pause and Reset</button>
+<br>
+
+<div class="container">
+    <div class="text-center">
+        <h2>Clickable images for audio</h2>
+    </div>
+    <div class="row">
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <a href="javascript:play_multi('aud1');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <a href="javascript:play_multi('aud1');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <a href="javascript:play_multi('aud1');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <a href="javascript:play_multi('aud1');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <button onclick='play_single("aud3")' type="button">Play sandstorm</button>
+        </div>
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <button onclick='pause_single("aud3")' type="button">Pause sandstorm (pause only)</button>
+        </div>
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <button onclick="toggle_single('aud3')" type="button">toggle sandstorm pause</button>
+        </div>
+        <div class="t2 col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            <button onclick="reset_single('aud3')" type="button">pause&reset sandstorm</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    
+    var channel_max = 3;										
+    // ^^ number of channels
+	audiochannels = new Array();
+	for (a=0;a<channel_max;a++) {									
+    // ^^ prepare the channels
+		audiochannels[a] = new Array();
+		audiochannels[a]['channel'] = new Audio();						
+    // ^^ create a new audio object
+		audiochannels[a]['finished'] = -1;							
+    // ^^ expected end time for this channel
+	}
+
+    // To play a sound on an open channel...
+	function play_multi(s) {
+		for (a=0;a<audiochannels.length;a++) {
+			thistime = new Date();
+			if (audiochannels[a]['finished'] < thistime.getTime()) {			
+        // ^^ is this channel finished?
+				audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
+				audiochannels[a]['channel'].src = document.getElementById(s).src;
+				audiochannels[a]['channel'].load();
+				audiochannels[a]['channel'].play();
+				break;
+			}
+		}
+	}
+
+// for only playing one sound at a time
+    function play_single(s) {
+        document.getElementById(s).play();
+    }
+
+//  function to pause an active sound
+    function pause_single(s) {
+        var music_file= document.getElementById(s);
+        music_file.pause();
+    }
+
+    function reset_single(s){
+        var curr_audio = document.getElementById(s);
+        curr_audio.pause();
+        // Reset the playback time to start
+        curr_audio.currentTime = 0;
+    }
+
+// one function to start or stop conditionally, saving where you are in the audfile's play-time
+    function toggle_single(s) {
+        var curr_audio = document.getElementById(s);
+        if (curr_audio.paused) {
+            curr_audio.play();
+        }else{
+            curr_audio.pause();
+            // Reset the time of aud-file to 0 to jump back to start
+        }
+    }
+
+    function reset_play(s) {
+        var curr_audio = document.getElementById(s);
+        if (curr_audio.paused) {
+            curr_audio.play();
+        }else{
+            curr_audio.pause();
+            // Reset the time of aud-file to 0 to jump back to start
+            curr_audio.currentTime = 0;
+        }
+    }
+</script>
+
+<!-- For playing a single sound item -->
+<!-- <div class="audiocontainer">
+    <audio id="a1" preload=auto>
+        <source src="./ExerciseAuds/golden_heyhey.wav" type="audio/wav">
+    </audio>
+    <a href="javascript:play_single_sound();">Play</a>
+
+</div>
+
+** To pause, then reset sound to play again
+
+function play() {
+    var audio = document.getElementById('audio1');
+    if (audio.paused) {
+        audio.play();
+    }else{
+        audio.pause();
+        audio.currentTime = 0
+    }
+}
+ -->
+ 
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="tic_tac.css">
+    <title>TicTacToe Game</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <span class="nav-item">
+            <a class="nav-link current_navbar_pg text-center" href="#">Home</a>
+        </span>
+        <span class="nav-item">
+            <div class="btn-group nav-link text-center">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Portfolio Projects
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="connect_4.html">Connect 4</a>
+                    <a class="dropdown-item" href="rainbow.html">Rainbow text page</a>
+                    <a class="dropdown-item" href="#">sample</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">separated sample</a>
+                </div>
+            </div>
+        </span>
+        <span class="nav-item">
+            <a class="nav-link current_navbar_pg text-center" href="#">About Me</a>
+        </span>
+        
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="d-flex justify-content-center">Tic Tac Toe Game (X moves first!)</h1>
+            <p class="d-flex justify-content-center">Hover shows the letter occupying square, Double-click clears a square, the button below resets all squares</p>
+            <br>
+        </div>
+        <p class="d-flex justify-content-center">
+            <button id="resetBtn">Reset board</button>
+        </p>
+        <p id="winMsg"></p>
+        <table class="d-flex justify-content-center">
+            <tr>
+                <td id="sq1"></td>
+                <td id="sq2"></td>
+                <td id="sq3"></td>
+            </tr>
+            <tr>
+                <td id="sq4"></td>
+                <td id="sq5"></td>
+                <td id="sq6"></td>
+            </tr>
+            <tr>
+                <td id="sq7"></td>
+                <td id="sq8"></td>
+                <td id="sq9"></td>
+            </tr>
+        </table>
+        <!-- <div class="row d-flex justify-content-center">
+            <div class="board_space">a1</div>
+            <div class="board_space">a2</div>
+            <div class="board_space">a3</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 d-flex justify-content-center">b1</div>
+            <div class="col-sm-3 d-flex justify-content-center">b2</div>
+            <div class="col-sm-3 d-flex justify-content-center">b3</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 d-flex justify-content-center">c1</div>
+            <div class="col-sm-3 d-flex justify-content-center">c2</div>
+            <div class="col-sm-3 d-flex justify-content-center">c3</div>
+        </div> -->
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="tic_tac.js"></script>
+</html>

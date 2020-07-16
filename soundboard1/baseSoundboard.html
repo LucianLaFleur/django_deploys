@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <title>Custom Soundboard Project1</title>
+</head>
+<body>
+    
+<!-- 
+<button onclick="play()" type="button">Play </button>
+<button onclick="pause()" type="button">Pause</button> -->
+
+<audio id="aud1" src="...." preload="auto"></audio>
+
+<audio id="heart" src=".\aud_for_soundboard\TP_Heart_up_blip.wav" preload="auto"></audio>
+
+
+<audio id="gunpop1" src=".\aud_for_soundboard\gunPopRicochet1.wav" preload="auto"></audio>
+<audio id="gunpop2" src=".\aud_for_soundboard\gunPopRicochet2.wav" preload="auto"></audio>
+<audio id="nya1" src=".\aud_for_soundboard\hourlyNya.wav" preload="auto"></audio>
+<audio id="nya_chumrum" src=".\aud_for_soundboard\4weirdNya.wav" preload="auto"></audio>
+<audio id="awoo1" src=".\aud_for_soundboard\awooShort.wav" preload="auto"></audio>
+
+<audio id="gunfire2" src=".\aud_for_soundboard\rapidFire2.wav" preload="auto"></audio>
+<audio id="gunfire" src=".\aud_for_soundboard\rapidFire1.wav" preload="auto"></audio>
+<audio id="reload2" src=".\aud_for_soundboard\reloadClink2.wav" preload="auto"></audio>
+<audio id="reload" src=".\aud_for_soundboard\reloadClink1.wav" preload="auto"></audio>
+<!-- <audio id="aud5" src="..." preload="auto"></audio> -->
+
+<nav class="navbar navbar-expand-lg">
+    <span class="nav-item">
+        <a class="nav-link current_navbar_pg text-center" href="#">Home</a>
+    </span>
+    <div class="btn-group nav-link text-center">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Other Soundboards
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">General</a>
+            <a class="dropdown-item" href="soundboardQuotes.html">quotes</a>
+            <a class="dropdown-item" href="#">env 2</a>
+            <a class="dropdown-item" href="#">music 3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated item</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron text-center">
+      <h1>Sound drop buttons project</h1>
+      <p>Also, check external hard drive</p>
+    </div>
+</div>
+
+<!-- Container for labels and sound drops -->
+<div class="container">
+<!-- labels row 1 -->
+    <!-- <div id="nameRow1" class="row grim_theme">
+        <div class="audlabel col-lg-2 col-md-3 col-sm-4 d-flex justify-content-center">
+            (gunfire)
+        </div>
+        <div class="audlabel col-lg-2 col-md-3 col-sm-4 d-flex justify-content-center">
+            (...)
+        </div>
+        <div class="audlabel col-lg-2 col-md-3 col-sm-4 d-flex justify-content-center">
+            (...)
+        </div>
+    </div> -->
+<!-- sounds row 1 -->
+    <div class="row">
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            gunpop single
+            <a id="gunpop_single" href="javascript:reset_play('gunpop1');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            gunpop alt
+            <a id="gunpop_single" href="javascript:reset_play('gunpop2');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            rapid fire 1
+            <a id="rapid fire" href="javascript:reset_play('gunfire');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            rapid fire 2
+            <a id="rapid fire2" href="javascript:reset_play('gunfire2');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            reload 1
+            <a id="reload" href="javascript:reset_play('reload');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            reload2
+            <a id="reload2" href="javascript:reset_play('reload2');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            nya
+            <a id="nya1" href="javascript:reset_play('nya1');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            nya chumrum
+            <a id="nya_chum2" href="javascript:reset_play('nya_chumrum');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            awoo
+            <a id="awoo1" href="javascript:reset_play('awoo1');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+        <div class="audicon col-lg-2 col-md-3 col-sm-4 thumbnail d-flex justify-content-center">
+            heart blip
+            <a id="heart1" href="javascript:reset_play('heart');">
+                <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    
+    var channel_max = 3;										
+    // ^^ number of channels
+	audiochannels = new Array();
+	for (a=0;a<channel_max;a++) {									
+    // ^^ prepare the channels
+		audiochannels[a] = new Array();
+		audiochannels[a]['channel'] = new Audio();						
+    // ^^ create a new audio object
+		audiochannels[a]['finished'] = -1;							
+    // ^^ expected end time for this channel
+	}
+
+    // To play a sound on an open channel...
+	function play_multi(s) {
+		for (a=0;a<audiochannels.length;a++) {
+			thistime = new Date();
+			if (audiochannels[a]['finished'] < thistime.getTime()) {			
+        // ^^ is this channel finished?
+				audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
+				audiochannels[a]['channel'].src = document.getElementById(s).src;
+				audiochannels[a]['channel'].load();
+				audiochannels[a]['channel'].play();
+				break;
+			}
+		}
+	}
+
+// for only playing one sound at a time
+    function play_single(s) {
+        document.getElementById(s).play();
+    }
+
+//  function to pause an active sound
+    function pause_single(s) {
+        var music_file= document.getElementById(s);
+        music_file.pause();
+    }
+
+    function reset_single(s){
+        var curr_audio = document.getElementById(s);
+        curr_audio.pause();
+        // Reset the playback time to start
+        curr_audio.currentTime = 0;
+    }
+
+// one function to start or stop conditionally, saving where you are in the audfile's play-time
+    function toggle_single(s) {
+        var curr_audio = document.getElementById(s);
+        if (curr_audio.paused) {
+            curr_audio.play();
+        }else{
+            curr_audio.pause();
+            // Reset the time of aud-file to 0 to jump back to start
+        }
+    }
+
+    function reset_play(s) {
+        var curr_audio = document.getElementById(s);
+        if (curr_audio.paused) {
+            curr_audio.play();
+        }else{
+            curr_audio.pause();
+            // Reset the time of aud-file to 0 to jump back to start
+            curr_audio.currentTime = 0;
+        }
+    }
+</script>
+
+
+</body>
+</html>

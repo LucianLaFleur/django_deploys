@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <title>Custom Soundboard Project1</title>
+</head>
+<body>
+    
+<!-- 
+<button onclick="play()" type="button">Play </button>
+<button onclick="pause()" type="button">Pause</button> -->
+
+<!-- ////////////////////////////////////////////////// -->
+
+<audio id="mediocrity_q" src="./aud_for_soundboard/quotes/Ambassador - Must You Fight So Hard To Reduce All The World To Mediocrity.ogg" preload="auto"></audio>
+<audio id="amy_weak" src="./aud_for_soundboard/quotes/amy_truth_of_matter_you_are_weak.wav" preload="auto"></audio>
+<audio id="amy_hope" src="./aud_for_soundboard/quotes/blackpill_amy_hope_only_disappointment.wav" preload="auto"></audio>
+<audio id="cass_tired" src="./aud_for_soundboard/quotes/cassandra_one_thing_after_another_getting_tired.wav" preload="auto"></audio>
+<audio id="jc_used_to_it" src="./aud_for_soundboard/quotes/jc_guess_i'll_get_used_to_it.mp3" preload="auto"></audio>
+<audio id="difficulty_that_shouldnt" src="./aud_for_soundboard/quotes/cave_despair_wasted_difficulty_that_shouldnt_exist.wav" preload="auto"></audio>
+<audio id="amy_worse" src="./aud_for_soundboard/quotes/amy_only_making_it_worse.wav" preload="auto"></audio>
+
+
+<!-- <audio id="aud5" src="..." preload="auto"></audio> -->
+<!-- ////////////////////////////////////////////////// -->
+
+<nav class="navbar navbar-expand-lg">
+    <span class="nav-item">
+        <a class="nav-link current_navbar_pg text-center" href="soundboard2.html">Home</a>
+    </span>
+    <div class="btn-group nav-link text-center">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Other Soundboards
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="soundboard2.html">General</a>
+            <a class="dropdown-item" href="#">quote lines</a>
+            <a class="dropdown-item" href="#">env 2</a>
+            <a class="dropdown-item" href="#">music 3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated item</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron text-center">
+      <h1>Soundboard template1</h1>
+      <p>...</p>
+    </div>
+</div>
+
+
+
+
+<!-- label row  -->
+<div id="nameRow2" class="row">
+    <div class="audlabel col-sm-4 d-flex justify-content-center">
+        .
+    </div>
+    <div class="audlabel col-sm-4 d-flex justify-content-center">
+        .
+    </div>
+    <div class="audlabel col-sm-4 d-flex justify-content-center">
+        .
+    </div>
+</div>
+<!-- sounds row # -->
+<div class="row">
+    <div class="audicon col-sm-4 thumbnail d-flex justify-content-center">
+        <a href="javascript:reset_play('...');">
+            <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+        </a>
+    </div>
+    <div class="audicon col-sm-4 thumbnail d-flex justify-content-center">
+        <a href="javascript:reset_play('...');">
+            <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+        </a>
+    </div>
+    <div class="audicon col-sm-4 thumbnail d-flex justify-content-center">
+        <a href="javascript:reset_play('...');">
+            <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+        </a>
+    </div>
+</div>
+
+<!-- label row # -->
+<!-- <div id="nameRow2" class="row">
+    <div class="audlabel col-sm-4 d-flex justify-content-center">
+        .
+    </div>
+    <div class="audlabel col-sm-4 d-flex justify-content-center">
+        .
+    </div>
+    <div class="audlabel col-sm-4 d-flex justify-content-center">
+        .
+    </div>
+</div> -->
+<!-- sounds row # -->
+<!-- <div class="row">
+    <div class="audicon col-sm-4 thumbnail d-flex justify-content-center">
+        <a href="javascript:reset_play('...');">
+            <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+        </a>
+    </div>
+    <div class="audicon col-sm-4 thumbnail d-flex justify-content-center">
+        <a href="javascript:reset_play('...');">
+            <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+        </a>
+    </div>
+    <div class="audicon col-sm-4 thumbnail d-flex justify-content-center">
+        <a href="javascript:reset_play('...');">
+            <img class="sounddrop_img" src="./img_refs/sm_gkSym.PNG" alt="gk symbol">
+        </a>
+    </div>
+</div> -->
+</div>
+<hr>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    
+    var channel_max = 3;										
+    // ^^ number of channels
+	audiochannels = new Array();
+	for (a=0;a<channel_max;a++) {									
+    // ^^ prepare the channels
+		audiochannels[a] = new Array();
+		audiochannels[a]['channel'] = new Audio();						
+    // ^^ create a new audio object
+		audiochannels[a]['finished'] = -1;							
+    // ^^ expected end time for this channel
+	}
+
+    // To play a sound on an open channel...
+	function play_multi(s) {
+		for (a=0;a<audiochannels.length;a++) {
+			thistime = new Date();
+			if (audiochannels[a]['finished'] < thistime.getTime()) {			
+        // ^^ is this channel finished?
+				audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
+				audiochannels[a]['channel'].src = document.getElementById(s).src;
+				audiochannels[a]['channel'].load();
+				audiochannels[a]['channel'].play();
+				break;
+			}
+		}
+	}
+
+// for only playing one sound at a time
+    function play_single(s) {
+        document.getElementById(s).play();
+    }
+
+//  function to pause an active sound
+    function pause_single(s) {
+        var music_file= document.getElementById(s);
+        music_file.pause();
+    }
+
+    function reset_single(s){
+        var curr_audio = document.getElementById(s);
+        curr_audio.pause();
+        // Reset the playback time to start
+        curr_audio.currentTime = 0;
+    }
+
+// one function to start or stop conditionally, saving where you are in the audfile's play-time
+    function toggle_single(s) {
+        var curr_audio = document.getElementById(s);
+        if (curr_audio.paused) {
+            curr_audio.play();
+        }else{
+            curr_audio.pause();
+            // Reset the time of aud-file to 0 to jump back to start
+        }
+    }
+
+    function reset_play(s) {
+        var curr_audio = document.getElementById(s);
+        if (curr_audio.paused) {
+            curr_audio.play();
+        }else{
+            curr_audio.pause();
+            // Reset the time of aud-file to 0 to jump back to start
+            curr_audio.currentTime = 0;
+        }
+    }
+</script>
+
+
+</body>
+</html>

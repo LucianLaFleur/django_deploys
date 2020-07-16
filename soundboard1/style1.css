@@ -1,0 +1,52 @@
+.navbar {
+    background: #225;
+}
+
+.current_navbar_pg{
+    color: rgb(236, 229, 129);
+    background-color: rgb(55, 40, 109);
+    box-shadow: 0px 0px 6px rgb(0, 0, 0);
+}
+
+.current_navbar_pg:hover{
+    color: blanchedalmond;
+    box-shadow: 0px 0px 10px 2px rgb(236, 229, 129);
+}
+
+.audicon {
+    border: 3px solid black;
+}
+
+.sounddrop_img {
+    margin: 3px 0px;
+    padding: 10px;
+    background-color: rgb(55, 40, 109);
+    box-shadow: 0px 0px 6px 4px rgb(81, 220, 224)
+    /* padding: 2px */
+}
+
+.sounddrop_img:hover {
+    box-shadow: 0px 0px 10px 7px rgb(252, 236, 93);
+    transition: 0.2s;
+}
+.sounddrop_img:active {
+    box-shadow: 0px 0px 10px 7px rgb(98, 177, 74);
+}
+
+.audlabel {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    color: rgb(255, 229, 82);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.grim_theme {
+    background-color: rgb(55, 40, 109);
+}
+
+.cheeky_theme{
+    background-color: crimson;
+}

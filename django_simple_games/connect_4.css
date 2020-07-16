@@ -1,0 +1,29 @@
+.navbar {
+    background: #225;
+}
+
+.container {
+    text-align: center;
+}
+
+.board{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-right: 11px solid blue;
+    border-left: 11px solid blue;
+    border-bottom: 11px solid blue;
+}
+
+.board button{
+    width: 90px;
+    height: 90px;
+    background-color: gray;
+    border: 5px solid tomato;
+    /* 50% border radius makes a circle */
+    border-radius: 50%;
+    margin: 2px;
+}
+.board button:hover{
+    background-color: turquoise;
+}

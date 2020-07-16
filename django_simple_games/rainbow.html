@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="rainbow.css">
+    <title>Skill Practice</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg">
+        <span class="nav-item">
+            <a class="nav-link current_navbar_pg text-center" href="#">Home</a>
+        </span>
+        <span class="nav-item">
+            <div class="btn-group nav-link text-center">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Portfolio Projects
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="tic_tac.html">Tic Tac Toe</a>
+                    <a class="dropdown-item" href="connect_4.html">Connect 4</a>
+                    <a class="dropdown-item" href="#">sample</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">separated sample</a>
+                </div>
+            </div>
+        </span>
+        <span class="nav-item">
+            <a class="nav-link current_navbar_pg text-center" href="#">About Me</a>
+        </span>
+        
+    </nav>
+
+    <div class="container">
+        <h1 id="rainbowH">Random-color Flashing Header</h1>
+        <div class="jumbotron">
+            <h2 id="hoverH">Hover test (randomizes paragraph colors too)</h2> 
+            <p class="p_in_jumbo">Lorem ipsum dolor sit amet.</p>
+            <h2 id="clickH">Click to do test</h2>   
+            <p class="p_in_jumbo">Lorem ipsum dolor sit amet.</p>
+            <h3 id="dblclkH">double click for new BG color</h3>
+        </div>
+        <p id="p_under_jumbo"><strong>Current BG color:</strong> The jumbotron has its default bg color.</p>
+        <button id="resetBGButton">Reset jumbotron background color </button>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="rainbow.js"></script>
+</html>
