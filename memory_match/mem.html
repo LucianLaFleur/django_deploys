@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mem.css">
+    <link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet'>
+    <script src="mem.js" async></script>
+    <title>Marines Memory Game</title>
+</head>
+<body>
+    <h1 class="page-title"> &#9670 Rank Insignia Memory Quiz &#9670</h1>
+    <div class="overlay-text">
+        Click here to start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        Game over
+        <span class="overlay-text-small">
+            click to restart game
+        </span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Congradulations! You've won!
+        <span class="overlay-text-small">
+            click to restart game
+        </span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time: <span id="time-countup">000</span>
+            </div>
+            <div id="match-label" class="game-info">
+                Matches: <span id="match-count">0</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        <!-- end top part, the card area is below -->
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
