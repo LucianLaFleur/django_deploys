@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mem.css">
+    <link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet"> 
+    <script src="mem.js" async></script>
+    <title>Marines Memory Game</title>
+</head>
+<body>
+    <audio id="pgturn" src="assets/audio/pageTurn.wav" preload="auto"></audio>
+
+    <h1 class="page-title"> &#9670 Marines Rank Memory Quiz &#9670</h1>
+    <div class="overlay-text visible">
+        Click here to start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        Game over
+        <span class="overlay-text-small">
+            click to restart game
+        </span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Congradulations! You've won!
+        <span class="overlay-text-small">
+            click to restart game
+        </span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time: <span id="time-countup">000</span>
+            </div>
+            <div id="match-label" class="game-info">
+                Matches: <span id="match-count">0</span> of 10
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        <!-- end top part, the card area is below -->
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e2pic" class="card-value rank-img" src="assets/imgs/pfc.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e2wor" class="card-value rank-term" style="font-size:30px">Private First Class<p>
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e4wor" class="card-value rank-term fit-term">Corporal<p>
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e4pic" class="card-value rank-img" src="assets/imgs/corporal.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e8pic" class="card-value rank-img" src="assets/imgs/first_sergeant.png" alt="">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e8wor" class="card-value rank-term">First Sergeant </p>
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e3pic" class="card-value rank-img" src="assets/imgs/lance_corporal.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e3wor" class="card-value rank-term"> Lance Corporal</p>
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e9pic" class="card-value rank-img" src="assets/imgs/master_gunnery_sergeant.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e9wor" class="card-value rank-term"> Master Gunnery Sergeant </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e8bpic" class="card-value rank-img" src="assets/imgs/master_sergeant.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e8bwor" class="card-value rank-term">Master Sergeant</p>
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e5pic" class="card-value rank-img" src="assets/imgs/sergeant.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e5wor" class="card-value rank-term fit-term">Sergeant</p>
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e6pic" class="card-value rank-img" src="assets/imgs/staff_sergeant.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e6wor" class="card-value rank-term"> Staff Sergeant </p>
+            </div>
+        </div>
+
+
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e9bpic" class="card-value rank-img" src="assets/imgs/sergeant_major_mar_corps.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e9bwor" class="card-value rank-term" style="font-size:22px">Sergeant Major of the Marine Corps</p>
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <img id="e9cpic" class="card-value rank-img" src="assets/imgs/sergant_major.png" alt="">
+            </div>
+        </div>
+
+        <div class="card"> 
+            <div class="card-back card-face">
+                <img class="globe-eagle" src="assets/imgs/marineLogo.png" alt="marine logo">
+            </div>
+            <div class="card-front card-face">
+                <p id="e9cwor" class="card-value rank-term"> Sergeant Major </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+<!-- <script src="fitty.min.js"></script> -->
+<!--  This module only seems to work on single words correctly... inline styling used for specs -->
+<!-- <script>
+fitty('.fit-term');
+</script> -->
+</html>
